@@ -75,14 +75,16 @@ Open browser and visit:
 
 http://localhost:3000
 🖼️ Output Screenshots
-### 🏠 Home Page
-![Home Page](screenshots/home.png)
 
-### 🧮 Calculator Page
-![Calculator Page](screenshots/calculator.png)
+🏠 Home Page
+![Home Page](Screenshots/home.png)
 
-### 📝 Registration Page
-![Registration Page](screenshots/registration.png)
+🧮 Calculator Page
+![Calculator Page](Screenshots/calculator.png)
+
+📝 Registration Page
+![Registration Page](Screenshots/registration.png)
+
 
 📌 Approach Used
 ✅ Approach 1 – Embedding Existing HTML/JS into React

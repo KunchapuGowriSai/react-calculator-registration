@@ -34,25 +34,23 @@ The Calculator and Registration Form are **existing HTML, CSS, and JavaScript pr
 ---
 
 ## 📂 Project Structure
-
-react-calculator-registration/
-│
-├── public/
-│   ├── calculator/
+react-calculator-registration
+├── public
+│   ├── calculator
 │   │   ├── index.html
 │   │   ├── style.css
 │   │   └── script.js
 │   │
-│   └── registration/
+│   └── registration
 │       ├── index.html
 │       ├── style.css
 │       └── script.js
 │
-├── src/
+├── src
 │   ├── App.js
 │   └── index.js
 │
-├── Screenshots/
+├── Screenshots
 │   ├── home.png
 │   ├── calculator.png
 │   └── registration.png
@@ -60,6 +58,7 @@ react-calculator-registration/
 ├── .gitignore
 ├── package.json
 └── README.md
+
 
 
 ## ▶️ How to Run the Project Locally

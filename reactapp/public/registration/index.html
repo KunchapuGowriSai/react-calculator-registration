@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Admission Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>College Admission Registration Form</h2>
+
+    <form id="admissionForm">
+
+        <div class="row">
+            <input type="text" id="name" placeholder="Enter Student Name">
+            <input type="text" id="fatherName" placeholder="Enter Father Name">
+        </div>
+
+        <div class="row">
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="date" id="dob">
+        </div>
+
+        <div class="row">
+            <input type="email" id="email" placeholder="Enter Email Address">
+            <input type="text" id="mobile" placeholder="Enter Mobile Number">
+        </div>
+
+        <div class="row">
+            <select id="state">
+                <option value="">Select State</option>
+            </select>
+            <select id="city">
+                <option value="">Select City</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <input type="text" id="otherCity" placeholder="Enter City Name" disabled>
+        </div>
+
+        <div class="row">
+            <select id="school">
+                <option value="">Select School</option>
+                <option value="Engineering">School of Engineering</option>
+                <option value="Science">School of Science</option>
+                <option value="Management">School of Management</option>
+            </select>
+            <select id="program">
+                <option value="">Select Program</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <select id="course">
+                <option value="">Select Course</option>
+            </select>
+            <input type="number" id="marks" placeholder="12th Marks (%)">
+        </div>
+
+        <div class="row">
+            <select id="category">
+                <option value="">Select Category</option>
+                <option>General</option>
+                <option>OBC</option>
+                <option>SC</option>
+                <option>ST</option>
+            </select>
+            <select id="hostel">
+                <option value="">Hostel Required?</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <div class="counter">
+        Total Registered Students: <span id="studentCount">0</span>
+    </div>
+
+    <div class="table-container">
+        <h3>Registered Students</h3>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>School</th>
+                    <th>Program</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

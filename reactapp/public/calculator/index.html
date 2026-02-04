@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator:Gowri Sai Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <p class="heading">Pure Calculation</p>
+        <div class="display">
+            <input type="text" id="display" readonly>
+        </div>
+        <br>
+
+        <div class="buttons-group">
+            <input class="button2" type="button" value="AC" onclick="document.getElementById('display').value =''">
+            <input class="button" type="button" value="%" onclick="document.getElementById('display').value += eval(display.value)/100">
+            <input class="button2" type="button" value="DEL" onclick="document.getElementById('display').value =display.value.slice(0,-1)">
+            <input class="button1" type="button" value="/" onclick="document.getElementById('display').value +='/'">
+        </div>
+
+        <div class="buttons-group">
+            <input class="button" type="button" value="7" onclick="document.getElementById('display').value +='7'">
+            <input class="button" type="button" value="8" onclick="document.getElementById('display').value +='8'">
+            <input class="button" type="button" value="9" onclick="document.getElementById('display').value +='9'">
+            <input class="button1" type="button" value="*" onclick="document.getElementById('display').value +='*'">
+        </div>
+
+        <div class="buttons-group">
+            <input class="button" type="button" value="4" onclick="document.getElementById('display').value +='4'">
+            <input class="button" type="button" value="5" onclick="document.getElementById('display').value +='5'">
+            <input class="button" type="button" value="6" onclick="document.getElementById('display').value +='6'">
+            <input class="button1" type="button" value="-" onclick="document.getElementById('display').value +='-'">
+        </div>
+
+        <div class="buttons-group">
+            <input class="button" type="button" value="1" onclick="document.getElementById('display').value +='1'">
+            <input class="button" type="button" value="2" onclick="document.getElementById('display').value +='2'">
+            <input class="button" type="button" value="3" onclick="document.getElementById('display').value +='3'">
+            <input class="button1" type="button" value="+" onclick="document.getElementById('display').value +='+'">
+        </div>
+
+        <div class="buttons-group">
+            <input class="button" type="button" value="00" onclick="document.getElementById('display').value +='00'">
+            <input class="button" type="button" value="0" onclick="document.getElementById('display').value +='0'">
+            <input class="button" type="button" value="." onclick="document.getElementById('display').value +='.'">
+            <input class="button1" type="button" value="=" onclick="document.getElementById('display').value = eval(display.value)">
+        </div>
+    </div>
+</body>
+<script>
+    const display = document.getElementById("display");
+
+    document.addEventListener("keydown", function (event) {
+        const key = event.key;
+
+        // Allow numbers
+        if (!isNaN(key)) {
+            display.value += key;
+        }
+
+        // Allow operators
+        else if (["+", "-", "*", "/", "%", "."].includes(key)) {
+            display.value += key;
+        }
+
+        // Enter = calculate
+        else if (key === "Enter") {
+            try {
+                display.value = eval(display.value);
+            } catch {
+                alert("Invalid Expression");
+            }
+        }
+
+        // Backspace = delete last character
+        else if (key === "Backspace") {
+            display.value = display.value.slice(0, -1);
+        }
+
+        // Escape or Delete = clear
+        else if (key === "Escape" || key === "Delete") {
+            display.value = "";
+        }
+    });
+</script>
+
+</html>
